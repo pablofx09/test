@@ -2,7 +2,9 @@ fn main() {
     
     let equation: &str = "4=3+45x";
     //println!("{}", algebra(equation));
-    println!("{}", arrange(equation));
+    
+    let z: &str = arrange(equation).as_str();
+    println!("{}", z);
     
     
     
@@ -54,8 +56,8 @@ fn finder(eq: &str) -> usize {
     }
     return 0 as usize;
 }
-fn arrange(eq: &str) -> &str {
-    let mut temp = String::from("");
+fn arrange(eq: &str) -> String {
+    let mut temp = String::new();
     let _equals: usize = finder(eq);
     for i in 0..eq.len() {
     
@@ -94,8 +96,8 @@ fn arrange(eq: &str) -> &str {
     
     }
     println!("{}", temp);
-    let _fin: &str = temp.as_str();
-    return "bob";
+    //let fin: &str = temp.as_str();
+    return temp;
 }
 
 
